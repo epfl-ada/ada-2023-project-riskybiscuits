@@ -4,7 +4,7 @@ import numpy as np
 
 def get_reviews(file, n_features):
     """
-    Returns dataframe of beet reviews from txt file
+    Returns dataframe of beer reviews from txt file
     """
     with open(file, "r", encoding="utf8") as f:
         lines = f.readlines()
