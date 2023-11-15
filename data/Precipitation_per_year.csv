@@ -1,7 +1,7 @@
 ﻿Rank,Country,Average precipitation (mm in depth per year),Continent
 1, Colombia,3240,South America
 2, São Tomé and Príncipe,3200,Africa
-, Tuvalu,,Oceania
+2, Tuvalu,3200,Oceania
 3, Papua New Guinea,3142,Oceania
 4, Solomon Islands,3028,Oceania
 5, Panama,2928,Central America
@@ -16,7 +16,7 @@
 14, Singapore,2497,Asia
 15, Liberia,2391,Africa
 16, Guyana,2387,South America
-17, Grenada[a],2350,North America
+17, Grenada,2350,North America
 18, Philippines,2348,Asia
 19, Suriname,2331,South America
 20, Seychelles,2330,Africa
@@ -55,11 +55,11 @@
 53, Saint Vincent and the Grenadines,1583,North America
 54, Guinea-Bissau,1577,Africa
 55, DR Congo,1543,Africa
-56,  Switzerland,1537,Europe
+56, Switzerland,1537,Europe
 57, Chile,1522,South America
 58, Madagascar,1513,Africa
 59, East Timor,1500,Asia
-59,   Nepal,1500,Asia
+59, Nepal,1500,Asia
 61, Albania,1485,Europe
 62, Haiti,1440,North America
 63, Saint Kitts and Nevis,1427,North America
@@ -150,7 +150,7 @@
 148, Azerbaijan,447,Asia
 149, Israel,435,Asia
 150, Botswana,416,Africa
-151, Palestine[b],402,Asia
+151, Palestine,402,Asia
 152, Eritrea,384,Africa
 153, Morocco,346,Africa
 154, Afghanistan,327,Asia
