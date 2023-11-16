@@ -1,0 +1,247 @@
+﻿Country,Climate zone,Avg °C
+Afghanistan,DSB,15.7
+Albania,CSB,15.17
+Algeria,BWH,20
+American Samoa,AW,28
+Andorra,CFB,7.17
+Angola,AW,24.37
+Anguilla,AW,21.68
+Antigua and Barbuda,AF,27.14
+Argentina,CFA,18.24
+Armenia,DFB,10.4
+Aruba,AW,27.52
+Australia,BWH,20.37
+Austria,DFB,8.82
+Azerbaijan,BSK,14.47
+Bahrain,BWH,27.98
+Bangladesh,AW,27.74
+Barbados,AM,27.61
+Belarus,DFB,8.66
+Belgium,CFB,11.41
+Belize,AM,26.64
+Benin,AW,29.12
+Bermuda,CFA,22.31
+Bhutan,CWB,15.6
+Bolivia,AW,18.3
+Bonaire,BS,27.31
+Bosnia and Herzegovina,DFB,12.32
+Botswana,BSH,24.56
+Brazil,AW,25.72
+British Indian Ocean Territory,AM,27.56
+British Virgin Islands,AM,27.13
+Brunei,AF,28.43
+Bulgaria,DFB,13.4
+Burkina Faso,BSH,31.14
+Burundi,CWB,20.47
+Cambodia,AM,28.97
+Cameroon,AW,26.81
+Canada,DFC,2.09
+Cape Verde,BWH,24.3
+Cayman Islands,AW,27.54
+Central African Republic,AW,28.52
+Chad,CFA,30.88
+Chile,CSB,14.49
+China,BSK,14.62
+Christmas Island,AW,26.13
+Cocos (Keeling) Islands,AF,
+Colombia,CFB,24.2
+Comoros,AF,26.96
+Cook Islands,AF,24.98
+Costa Rica,CFB,23.57
+Cote D'Ivoire,AW,28.01
+Croatia,CFB,13.5
+Cuba,AW,26.91
+Curacao,AW,27.52
+Cyprus,BSH,21.71
+Czechia,CFB,10.07
+Democratic Republic of the Congo,AM,26.82
+Denmark,CFB,9.89
+Djibouti,BWH,29.8
+Dominica,AF,27.31
+Dominican Republic,AF,26.07
+Ecuador,CFB,17.26
+Egypt,BWH,24.9
+El Salvador,AW,27.31
+Equatorial Guinea,AM,26.08
+Eritrea,BWH,26.99
+Estonia,DFB,7.51
+Eswatini,CWA,20.77
+Ethiopia,BSH,22.23
+Falkland Islands,ET,7.85
+Faroe Islands,CFC,7.94
+Federated States of Micronesia,AF,28.54
+Fiji,AF,26.49
+Finland,DFC,5.64
+France,CFB,12.44
+French Guiana,AF,27.45
+French Polynesia,AF,25.73
+French Southern Territories,ET,21.92
+Gabon,AW,26.7
+Georgia,CFA,12.11
+Germany,CFB,10.68
+Ghana,AW,28.86
+Gibraltar,CSA,18
+Greece,CSA,17.02
+Greenland,EF,-10.07
+Grenada,AW,27.6
+Guadeloupe,AF,27.28
+Guam,AF,28.33
+Guatemala,AM,21.72
+Guernsey,CFB,12.5
+Guinea,AW,27.06
+Guinea-Bissau,AW,29.72
+Guyana,AF,27.79
+Haiti,AW,26.48
+Honduras,AM,24.43
+Hong Kong,CWA,24.11
+Hungary,CFB,13.04
+Iceland,ET,3.17
+India,AW,25.97
+Indonesia,AF,27.11
+Iran,BWK,18.43
+Iraq,BWH,26.77
+Ireland,CFB,10.1
+Isle of Man,CFB,10.64
+Israel,BSH,22.69
+Italy,CSA,14.47
+Jamaica,AW,26.83
+Japan,DFB,15.19
+Jersey,CFB,12.47
+Jordan,CFA,22.17
+Kazakhstan,BSK,9.33
+Kenya,AW,22.5
+Kiribati,AF,27.6
+Kosovo,CFB,12.36
+Kuwait,BWH,28.83
+Kyrgyzstan,DFB,9.61
+Laos,CWA,25.39
+Latvia,DFB,8.07
+Lebanon,CSA,19.92
+Lesotho,CWB,16.06
+Liberia,AM,26.86
+Libya,BWH,23.87
+Liechtenstein,CFB,8.62
+Lithuania,DFB,8.77
+Luxembourg,CFB,10.06
+Macau,CWA,24.37
+Madagascar,CWB,23.88
+Malawi,AW,23.02
+Malaysia,AF,28.28
+Maldives,AM,28.21
+Mali,BWH,31.77
+Malta,CSA,19.94
+Marshall Islands,AF,28.16
+Martinique,AF,27.58
+Mauritania,BWH,29.76
+Mauritius,AM,25.09
+Mayotte,AW,27.17
+Mexico,BSK,22.03
+Moldova,DFB,12.59
+Monaco,CSB,16.04
+Mongolia,BSK,1.22
+Montenegro,CFB,12.24
+Montserrat,AM,27.26
+Morocco,BSH,21.46
+Mozambique,AW,25.62
+Myanmar,AW,27.02
+Namibia,BWH,24.46
+Nauru,AF,28.36
+Nepal,CWB,22
+Netherlands,CFB,11.59
+New Caledonia,CFA,23.44
+New Zealand,CFB,13.07
+Nicaragua,AM,26.48
+Niger,BWH,32.04
+Nigeria,AW,29.46
+Niue,AF,26.02
+Norfolk Island,CFA,
+Northern Mariana Islands,AF,28.08
+North Korea,DWB,9.25
+North Macedonia,CFB,13.29
+Norway,DFC,5.03
+Oman,BWH,29.2
+Pakistan,BWH,20.89
+Palau,AF,28.53
+Palestine,CSA,22.6
+Panama,AM,26.87
+Papua New Guinea,AF,23.03
+Paraguay,AW,25.06
+Peru,AF,17.63
+Philippines,AF,27.22
+Pitcairn Islands,AF,23.17
+Poland,CFB,10.6
+Portugal,CSA,16.81
+Puerto Rico,AM,26.96
+Qatar,BWH,29.74
+Republic of the Congo,AM,27.33
+Reunion,AS,23.22
+Romania,DFB,12.86
+Russia,DFC,5.27
+Rwanda,CFB,20.44
+Saint Barthelemy,AW,27.14
+Saint Helena,BWH,20.5
+Saint Kitts and Nevis,AW,27.1
+Saint Lucia,AF,27.77
+Saint Martin,AW,27.07
+Saint Pierre and Miquelon,DFB,6.58
+Saint Vincent and the Grenadines,AF,26.72
+Samoa,AW,27.65
+San Marino,CFB,16.66
+Sao Tome and Principe,AS,26.54
+Saudi Arabia,BWH,27.01
+Senegal,BSH,30.32
+Serbia,CFB,13.25
+Seychelles,AF,27.59
+Sierra Leone,AM,27.61
+Singapore,AF,25.1
+Sint Maarten,AW,27.07
+Slovakia,DFB,10.78
+Slovenia,CFB,11.8
+Solomon Islands,AF,27.76
+Somalia,BWH,27.91
+South Africa,BWK,21.22
+South Georgia and South Sandwich Islands,ET,0.02
+South Korea,DWB,13.6
+South Sudan,AW,29.5
+Spain,CSA,16.61
+Sri Lanka,AF,27.46
+Sudan,BSH,30.04
+Suriname,AF,27.51
+Svalbard And Jan Mayen,ET,-2
+Sweden,DFB,7.25
+Switzerland,DFC,9.1
+Syria,BWH,21.76
+Taiwan,CWB,24.43
+Tajikistan,DSC,7.86
+Tanzania,BSH,24.22
+Thailand,AW,28.64
+The Bahamas,AW,25.84
+The Gambia,AW,29.58
+Timor-Leste,AW,26.57
+Togo,CFA,26.08
+Tokelau,AF,28.55
+Tonga,AF,25.73
+Trinidad and Tobago,AM,27.72
+Tunisia,BWH,21.09
+Turkey,CSB,14.96
+Turkmenistan,BSK,19.59
+Turks and Caicos Islands,AS,26.73
+Tuvalu,AF,28.72
+Uganda,AM,23.47
+Ukraine,DFB,11.38
+United Arab Emirates,BWH,29.78
+United Kingdom,CFB,10.75
+United States,CFA,12.64
+United States Minor Outlying Islands,AF,26.33
+Uruguay,CFA,18.62
+US Virgin Islands,AM,27.14
+Uzbekistan,BWK,17.67
+Vanuatu,AF,26.28
+Vatican City,CSA,18.38
+Venezuela,AM,26.65
+Vietnam,CWA,26.25
+Wallis and Futuna,AF,28.13
+Western Sahara,BWH,26.74
+Yemen,BWH,25.53
+Zambia,CWA,23.33
+Zimbabwe,BSH,22.73
