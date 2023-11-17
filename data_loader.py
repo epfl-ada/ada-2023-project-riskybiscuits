@@ -287,4 +287,8 @@ def merge_reviews(
         errors="raise",
     )
 
+    reviews_df["nbr_ratings"] = (
+        reviews_df["nbr_ratings_rb"] + reviews_df["nbr_ratings_ba"]
+    )
+
     return reviews_df
