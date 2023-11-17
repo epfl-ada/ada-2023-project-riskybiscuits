@@ -5,3 +5,5 @@ test.ipynb
 ratings_ba.txt
 ratings_rb.txt
 TODO Alban.txt
+
+__pycache__/
