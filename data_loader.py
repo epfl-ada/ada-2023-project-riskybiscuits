@@ -31,6 +31,7 @@ def get_reviews_df(review_path: str) -> pd.DataFrame:
     # create df
     reviews = data.reshape((-1, n_features))
     reviews_df = pd.DataFrame(reviews, columns=features)
+    reviews_df = reviews_df.replace("nan", np.nan)
     return reviews_df
 
 
@@ -267,10 +268,9 @@ def merge_reviews(
 
     if (n_reviews_ba + n_reviews_rb) != reviews_df.shape[0]:
         raise ValueError("There are missing breweries or duplicate entries in beers")
-    
-    #remove the duplicate beer_name_ba column
-    reviews_df = reviews_df.drop(['beer_name_ba'], axis=1)
 
+    # remove the duplicate beer_name_ba column
+    reviews_df = reviews_df.drop(["beer_name"], axis=1)
 
     # rename the columns to give them more explicit names
     reviews_df = reviews_df.rename(
@@ -278,7 +278,7 @@ def merge_reviews(
             "brewery_name_ba": "brewery_name",
             "brewery_location_ba": "brewery_location",
             "style_ba": "style",
-            #"beer_name_ba": "beer_name",
+            "beer_name_ba": "beer_name",
             "abv_ba": "abv",
             "location": "user_location",
             "nbr_ratings": "user_nbr_ratings",
@@ -286,6 +286,9 @@ def merge_reviews(
         axis=1,
         errors="raise",
     )
-   
+
+    reviews_df["nbr_ratings"] = (
+        reviews_df["nbr_ratings_rb"] + reviews_df["nbr_ratings_ba"]
+    )
 
     return reviews_df
