@@ -1,0 +1,11 @@
+climate,scheme,seasonal_precipitation,heat_level
+Cfa,Temperate,without dry season,hot summer
+Dfb,Continental,without dry season,warm summer
+Dfa,Continental,without dry season,hot summer
+Csa,Temperate,with dry season,hot summer
+Dsb,Continental,with dry season,warm summer
+Dfc,Continental,without dry season,cold summer
+Csb,Temperate,with dry season,warm summer
+Bsk,Dry,with dry season,cold summer
+Cfb,Temperate,without dry season,warm summer
+Dsc,Continental,with dry season,cold summer
