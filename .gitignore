@@ -10,3 +10,4 @@ __pycache__/
 main copy 2.ipynb
 
 data/us_users_txt.csv
+data/us_users_ratings.csv

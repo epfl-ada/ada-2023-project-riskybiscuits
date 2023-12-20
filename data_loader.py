@@ -32,6 +32,16 @@ def get_reviews_df(review_path: str) -> pd.DataFrame:
     reviews = data.reshape((-1, n_features))
     reviews_df = pd.DataFrame(reviews, columns=features)
     reviews_df = reviews_df.replace("nan", np.nan)
+    columns_compare = ["aroma", "appearance", "palate", "taste", "overall", "rating"]
+    reviews_df[columns_compare] = reviews_df[columns_compare].astype(float)
+    reviews_df[columns_compare] = (
+        reviews_df[columns_compare] - reviews_df[columns_compare].min()
+    )
+    reviews_df[columns_compare] = reviews_df[columns_compare] / (
+        reviews_df[columns_compare].max() - reviews_df[columns_compare].min()
+    )
+    reviews_df[columns_compare] = reviews_df[columns_compare] * 4 + 1
+
     return reviews_df
 
 
@@ -270,7 +280,7 @@ def merge_reviews(
         raise ValueError("There are missing breweries or duplicate entries in beers")
 
     # remove the duplicate beer_name_ba column
-    reviews_df = reviews_df.drop(["beer_name"], axis=1)
+    reviews_df = reviews_df.drop(["beer_name", "style"], axis=1)
 
     # rename the columns to give them more explicit names
     reviews_df = reviews_df.rename(
@@ -292,3 +302,41 @@ def merge_reviews(
     )
 
     return reviews_df
+
+
+def get_us_reviews(
+    reviews_df: pd.DataFrame,
+    climate_classifications: pd.DataFrame,
+    states_climate: pd.DataFrame,
+) -> pd.DataFrame:
+    us_users_ratings = reviews_df.dropna(subset=["user_location"])
+    us_users_ratings = us_users_ratings[
+        us_users_ratings["user_location"].str.contains("United States")
+    ]
+
+    us_users_ratings["user_location"] = [
+        name.replace("United States, ", "")
+        for name in us_users_ratings["user_location"]
+    ]
+
+    # add climate column where climate is the climate of the state the user is from
+    us_users_ratings["climate"] = us_users_ratings["user_location"].map(
+        states_climate["Climate"]
+    )
+    us_users_ratings["nbr_ratings"] = us_users_ratings.groupby("beer_name")[
+        "beer_name"
+    ].transform("count")
+    us_users_ratings = us_users_ratings[us_users_ratings["nbr_ratings"] > 10]
+
+    us_users_ratings["climate_scheme"] = us_users_ratings["climate"].map(
+        climate_classifications["scheme"]
+    )
+
+    us_users_ratings["climate_precipitation"] = us_users_ratings["climate"].map(
+        climate_classifications["seasonal_precipitation"]
+    )
+
+    us_users_ratings["climate_temperature"] = us_users_ratings["climate"].map(
+        climate_classifications["heat_level"]
+    )
+    return us_users_ratings
