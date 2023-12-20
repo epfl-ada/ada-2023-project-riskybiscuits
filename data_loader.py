@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 
-
 def get_reviews_df(review_path: str) -> pd.DataFrame:
     """Returns dataframe of reviews from the given txt file
 
