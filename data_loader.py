@@ -308,6 +308,7 @@ def get_us_reviews(
     reviews_df: pd.DataFrame,
     climate_classifications: pd.DataFrame,
     states_climate: pd.DataFrame,
+    min_reviews_per_beer=10,
 ) -> pd.DataFrame:
     us_users_ratings = reviews_df.dropna(subset=["user_location"])
     us_users_ratings = us_users_ratings[
@@ -326,7 +327,9 @@ def get_us_reviews(
     us_users_ratings["nbr_ratings"] = us_users_ratings.groupby("beer_name")[
         "beer_name"
     ].transform("count")
-    us_users_ratings = us_users_ratings[us_users_ratings["nbr_ratings"] > 10]
+    us_users_ratings = us_users_ratings[
+        us_users_ratings["nbr_ratings"] > min_reviews_per_beer
+    ]
 
     us_users_ratings["climate_scheme"] = us_users_ratings["climate"].map(
         climate_classifications["scheme"]
