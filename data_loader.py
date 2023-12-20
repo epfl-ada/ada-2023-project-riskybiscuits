@@ -308,6 +308,7 @@ def get_us_reviews(
     reviews_df: pd.DataFrame,
     climate_classifications: pd.DataFrame,
     states_climate: pd.DataFrame,
+    general_style: pd.DataFrame,
     min_reviews_per_beer=10,
 ) -> pd.DataFrame:
     us_users_ratings = reviews_df.dropna(subset=["user_location"])
@@ -342,4 +343,7 @@ def get_us_reviews(
     us_users_ratings["climate_temperature"] = us_users_ratings["climate"].map(
         climate_classifications["heat_level"]
     )
+    
+    us_users_ratings = pd.merge(us_users_ratings, general_style, on="style", how="left")
+    
     return us_users_ratings
