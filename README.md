@@ -2,7 +2,7 @@
 
 # Our Website
 
-You can find the data story of the project [here!](https://albanpuech.github.io/risky-biscuits-project/)
+You can find the data story of our project <a href="https://albanpuech.github.io/risky-biscuits-project/" style="color:#009900;">here!</a>
 
 
 ## Goal
