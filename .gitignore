@@ -13,3 +13,5 @@ data/us_users_txt.csv
 data/us_users_ratings.csv
 
 data/us_users_txt_new.pkl
+
+*.DS_Store
