@@ -1,4 +1,4 @@
-# Pints and Patterns: How Climate Shapes U.S. Beer Ratings
+# Cheers to Latitude; A Journey Through Climate and Beer Preferences
 
 # Our Website
 
