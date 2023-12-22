@@ -32,3 +32,5 @@ text_analysis_preprocessing.py
 predone_files_text_analysis.zip
 counts_climate_tfidf.csv
 data.zip
+
+*.DS_Store
