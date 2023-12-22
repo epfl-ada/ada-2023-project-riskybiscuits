@@ -14,4 +14,18 @@ data/us_users_ratings.csv
 
 data/us_users_txt_new.pkl
 
-*.DS_Store
+data/adj_climate.csv
+
+data/counts_climate.csv
+
+data/counts_climate_div.csv
+
+data/occurence.csv
+
+data/us_users_txt_rev_adj_processed.csv
+
+data/us_users_txt_rev_complete.csv
+
+data/us_users_txt_rev_with_lang.csv
+
+text_analysis_preprocessing.py
