@@ -2,7 +2,7 @@
 
 # Our Website
 
-You can find the data story of our project <a href="https://albanpuech.github.io/risky-biscuits-project/" style="color:#009900;">here!</a>
+You can find the data story of our project <a href="https://albanpuech.github.io/risky-biscuits-project/" style="color:#009900;">here!</a>\
 The data to be put at ".\data\" is available <a href="https://drive.google.com/file/d/1DCOkmaGSG_sStAKGskQW2uQd6IGJbRiJ/view?usp=sharing" style="color:#009900;">here!</a>
 
 
