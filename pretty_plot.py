@@ -1,8 +1,8 @@
-'''
+"""
 pretty_plot.py
 
 This file contains functions for making pretty plots.
-'''
+"""
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,7 +14,6 @@ import matplotlib.cm as cm
 from matplotlib.colors import Normalize
 
 from PIL import Image
-
 
 
 def plot_climate_one_stat(
@@ -83,7 +82,8 @@ def plot_climate_one_stat(
     ax.set_xlim(-140, -60)
 
     plt.show()
-    
+
+
 def plot_climate_multiple_stats(
     df,
     columns,
@@ -128,29 +128,27 @@ def plot_climate_multiple_stats(
     num_plots = len(columns)
     figsize = (figsize[0] * num_plots, figsize[1])
     fig, axes = plt.subplots(1, num_plots, figsize=figsize)
-    
+
     if not separate_colorbars:
         # Get the min and max values of the columns to plot
         vmin = df[columns].min().min()
         vmax = df[columns].max().max()
-    
-    
+
     for i in range(num_plots):
-        
         us_map_shifted.boundary.plot(ax=axes[i], linewidth=1, color="black")
-        
+
         # Plot on the colorbar only the unique values associated to the each climate type
         values = df[columns[i]].unique()
-        
+
         if separate_colorbars:
             vmin = values.min()
             vmax = values.max()
-        
+
         # Sort the dictionary by descending values
         norm = Normalize(vmin=vmin, vmax=vmax)
         sm = cm.ScalarMappable(cmap=cmap_name, norm=norm)
         sm.set_array([])
-        
+
         us_map_shifted.plot(
             column=columns[i],
             cmap=cmap_name,
@@ -158,31 +156,31 @@ def plot_climate_multiple_stats(
             legend=False,
             missing_kwds={"color": "lightgrey", "label": "Missing values"},
             vmin=vmin,
-            vmax=vmax
+            vmax=vmax,
         )
-        
+
         cbar = fig.colorbar(sm, ax=axes[i], orientation="vertical", ticks=values)
         cbar.set_ticks(values)
         cbar.set_ticklabels(
-            [label + ": {:.2f}".format(value) for value, label in zip(values, df[column_ticks[i]].unique())]
+            [
+                label + ": {:.2f}".format(value)
+                for value, label in zip(values, df[column_ticks[i]].unique())
+            ]
         )
-        
+
         axes[i].set_title(titles[i])
         # change the size of the title
         axes[i].title.set_size(13)
-        
+
         axes[i].set_axis_off()
         axes[i].set_xlim(-140, -60)
-        
+
     plt.tight_layout()
     plt.show()
-        
+
+
 def spider_plot(
-    scores_around,
-    scores_averages,
-    list_categories,
-    figsize=(8, 8),
-    title=None
+    scores_around, scores_averages, list_categories, figsize=(8, 8), title=None
 ):
     """
     This function plots a spider plot of the columns passed as argument.
@@ -198,17 +196,19 @@ def spider_plot(
 
     fig = plt.figure(figsize=figsize)
     ax = fig.add_subplot(111, polar=True)
-    
+
     # Set the angle of the ticks
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
-    
+
     # Set the ticks
     ticks = np.linspace(0, 2 * np.pi, len(scores_around), endpoint=False)
     ticks = np.append(ticks, ticks[0])
 
     ax.set_xticks(ticks[:-1])
-    ax.set_xticklabels([score for score in scores_around])
+    ax.set_xticklabels(
+        [score for score in scores_around], fontsize=14
+    )  # Increase ticks label size
 
     for climate_t in list_categories:
         # Get the average score for each climate
@@ -228,12 +228,14 @@ def spider_plot(
     )
 
     # Set the title
-    ax.set_title("Average score for each climate temperature", y=1.1)
-    ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1.1))
+    ax.set_title(title, y=1.1, fontsize=20)  # Increase title size
+    ax.legend(
+        loc="upper right", bbox_to_anchor=(1.3, 1.1), fontsize=12
+    )  # Increase legend size
 
     plt.show()
-    
-    
+
+
 def plot_on_beers(
     df,
     column,
@@ -244,7 +246,7 @@ def plot_on_beers(
     """
     This function plots the column passed as argument different beers.
     The values are showed by how much the beer is filled.
-    
+
     Args:
         df (pd.DataFrame): DataFrame containing the data to plot
         column (str): Column to plot
@@ -252,15 +254,15 @@ def plot_on_beers(
         title (str, optional): Title of the plot. Defaults to None.
         figsize (tuple, optional): Size of the figure. Defaults to (20, 10).
     """
-    
+
     img = plt.imread("data/images/beer2.png")
-    
+
     mask = np.array(Image.open("data/images/beer2.png").convert("L")) > 1
     mask = ~mask
-    
+
     num_rows = df.shape[0]
     fig, axs = plt.subplots(1, num_rows, figsize=figsize)
-    
+
     i = 0
     for row in df.iterrows():
         # Create an image with the same shape as the mask
@@ -271,21 +273,34 @@ def plot_on_beers(
         width = 116
         height_max = 350
         y_max = 450
-        
+
         fill_percentage = 1 - row[1][column] / 10
 
-        img_plot[int(y_max - fill_percentage * height_max):y_max, x_center-width:x_center+width, ...] = (1, 0.6, 0, 1)
-        
+        img_plot[
+            int(y_max - fill_percentage * height_max) : y_max,
+            x_center - width : x_center + width,
+            ...,
+        ] = (1, 0.6, 0, 1)
+
         # Mask the img_plot with the mask
         img_masked = img_plot * mask[..., None]
 
         img_masked = img_masked + img
-        
+
         axs[i].imshow(img_masked)
         axs[i].set_title(row[1][column_ticks])
-        axs[i].text(0.43, 0.13, str(row[1][column]), fontsize=15, color="black", horizontalalignment="center", verticalalignment="center", transform=axs[i].transAxes)
+        axs[i].text(
+            0.43,
+            0.13,
+            str(row[1][column]),
+            fontsize=15,
+            color="black",
+            horizontalalignment="center",
+            verticalalignment="center",
+            transform=axs[i].transAxes,
+        )
         axs[i].axis("off")
         i += 1
-        
+
     plt.suptitle(title, y=0.65)
     plt.show()
