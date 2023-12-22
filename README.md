@@ -1,4 +1,4 @@
-# Pints and Patterns: How Climate Shapes U.S. Beer Ratings
+# Cheers to Latitude; A Journey Through Climate and Beer Preferences
 
 # Our Website
 
@@ -68,9 +68,13 @@ Remove all the beers that have less than 10 reviews
 - We then plot the two categories in the U.S. map
 - We repeat the analysis for the three others climates classification
 
+9) **Analysis of text reviews**:
+- We analyse only the english reviews.
+- For each climate, we find out all the adjective present in the reviews. Then compute the TF-IDF for each climate to show the important adjectives for each climate in an attempt to show vocabulary differences when talking about beers.
+- We compute the polarity and subjectivity score for each of the review and then see if these change depending on the climate or climate subgroup.
+
 **Note**: for each comparison between different datasets we computed in parallel statistical tests (one-way ANOVA tests) to account for statistically significance of the results. 
  
-
 ## Proposed timeline
 
 **Step 1**: 20/11/2023: Finish the pre-processing.<br>
